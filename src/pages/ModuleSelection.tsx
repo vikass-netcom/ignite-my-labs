@@ -62,7 +62,7 @@ const ModuleSelection = () => {
 
   const handleLaunchComplete = () => {
     setShowLoader(false);
-    window.open("https://portal.azure.com", "_blank");
+    navigate(`/course/${courseId}/lab/${launchingModuleId}`);
   };
 
   const courseTitles: Record<string, string> = {
