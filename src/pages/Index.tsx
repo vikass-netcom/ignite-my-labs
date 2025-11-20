@@ -1,14 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { CourseCard } from "@/components/CourseCard";
 import { LoginModal } from "@/components/LoginModal";
-import { ModuleSelectionModal } from "@/components/ModuleSelectionModal";
-import { LaunchingLoader } from "@/components/LaunchingLoader";
 import { BookOpen, GraduationCap } from "lucide-react";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showModuleModal, setShowModuleModal] = useState(false);
-  const [showLoader, setShowLoader] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
 
@@ -39,46 +37,13 @@ const Index = () => {
     },
   ];
 
-  const az104Modules = [
-    {
-      id: "mod1",
-      title: "Module 1: Identity and Governance",
-      description: "Manage Azure Active Directory objects and implement Azure Policy",
-      duration: "2 hours",
-      completed: true,
-    },
-    {
-      id: "mod2",
-      title: "Module 2: Storage Solutions",
-      description: "Configure and manage storage accounts, blob storage, and Azure Files",
-      duration: "2.5 hours",
-    },
-    {
-      id: "mod3",
-      title: "Module 3: Virtual Machines",
-      description: "Deploy and configure virtual machines for Windows and Linux",
-      duration: "3 hours",
-    },
-    {
-      id: "mod4",
-      title: "Module 4: Virtual Networks",
-      description: "Implement and manage virtual networking including VNet peering",
-      duration: "2.5 hours",
-    },
-    {
-      id: "mod5",
-      title: "Module 5: Monitoring and Backup",
-      description: "Configure Azure Monitor and implement backup and recovery solutions",
-      duration: "2 hours",
-    },
-  ];
 
   const handleLaunchLab = (courseId: string) => {
     setSelectedCourse(courseId);
     if (!isLoggedIn) {
       setShowLoginModal(true);
     } else {
-      setShowModuleModal(true);
+      navigate(`/modules/${courseId}`);
     }
   };
 
@@ -86,19 +51,9 @@ const Index = () => {
     console.log("User logged in:", data);
     setIsLoggedIn(true);
     setShowLoginModal(false);
-    setShowModuleModal(true);
-  };
-
-  const handleLaunchModule = (moduleId: string) => {
-    console.log("Launching module:", moduleId);
-    setShowModuleModal(false);
-    setShowLoader(true);
-  };
-
-  const handleLaunchComplete = () => {
-    setShowLoader(false);
-    // Redirect to Azure portal
-    window.open("https://portal.azure.com", "_blank");
+    if (selectedCourse) {
+      navigate(`/modules/${selectedCourse}`);
+    }
   };
 
   return (
@@ -145,15 +100,8 @@ const Index = () => {
         </div>
       </main>
 
-      {/* Modals and Loaders */}
+      {/* Login Modal */}
       <LoginModal open={showLoginModal} onClose={() => setShowLoginModal(false)} onLogin={handleLogin} />
-      <ModuleSelectionModal
-        open={showModuleModal}
-        onClose={() => setShowModuleModal(false)}
-        modules={az104Modules}
-        onLaunchModule={handleLaunchModule}
-      />
-      {showLoader && <LaunchingLoader onComplete={handleLaunchComplete} />}
     </div>
   );
 };
