@@ -43,7 +43,7 @@ const Index = () => {
     if (!isLoggedIn) {
       setShowLoginModal(true);
     } else {
-      navigate(`/modules/${courseId}`);
+      navigate(`/course/${courseId}`);
     }
   };
 
@@ -52,7 +52,7 @@ const Index = () => {
     setIsLoggedIn(true);
     setShowLoginModal(false);
     if (selectedCourse) {
-      navigate(`/modules/${selectedCourse}`);
+      navigate(`/course/${selectedCourse}`);
     }
   };
 
