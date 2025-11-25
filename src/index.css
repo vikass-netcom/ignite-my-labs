@@ -19,16 +19,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 211 100% 43%;
+    --primary: 43 74% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 100% 97%;
-    --secondary-foreground: 211 100% 43%;
+    --secondary: 45 100% 96%;
+    --secondary-foreground: 43 74% 49%;
 
-    --muted: 210 40% 96%;
+    --muted: 45 30% 94%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 28 80% 52%;
+    --accent: 43 90% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -36,22 +36,22 @@ All colors MUST be HSL.
 
     --border: 214 25% 88%;
     --input: 214 25% 88%;
-    --ring: 211 100% 43%;
+    --ring: 43 74% 49%;
 
     --radius: 0.75rem;
 
-    --azure-blue: 211 100% 43%;
-    --azure-light: 210 100% 97%;
-    --azure-dark: 211 100% 35%;
+    --azure-blue: 43 74% 49%;
+    --azure-light: 45 100% 96%;
+    --azure-dark: 43 74% 38%;
     --success: 142 76% 36%;
     --warning: 28 80% 52%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 43%) 0%, hsl(211 100% 35%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 100% 99%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 38%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(45 100% 98%) 100%);
     
-    --shadow-sm: 0 2px 8px hsl(211 100% 43% / 0.08);
-    --shadow-md: 0 4px 16px hsl(211 100% 43% / 0.12);
-    --shadow-lg: 0 8px 24px hsl(211 100% 43% / 0.16);
+    --shadow-sm: 0 2px 8px hsl(43 74% 49% / 0.08);
+    --shadow-md: 0 4px 16px hsl(43 74% 49% / 0.12);
+    --shadow-lg: 0 8px 24px hsl(43 74% 49% / 0.16);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -75,7 +75,7 @@ All colors MUST be HSL.
     --popover: 215 25% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 211 100% 50%;
+    --primary: 43 74% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 215 25% 18%;
@@ -92,15 +92,15 @@ All colors MUST be HSL.
 
     --border: 215 25% 18%;
     --input: 215 25% 18%;
-    --ring: 211 100% 50%;
+    --ring: 43 74% 55%;
 
-    --azure-blue: 211 100% 50%;
+    --azure-blue: 43 74% 55%;
     --azure-light: 215 25% 18%;
-    --azure-dark: 211 100% 40%;
+    --azure-dark: 43 74% 42%;
     --success: 142 76% 36%;
     --warning: 28 80% 52%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%) 0%, hsl(211 100% 40%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(43 74% 55%) 0%, hsl(43 74% 42%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(215 25% 12%) 0%, hsl(215 25% 15%) 100%);
     
     --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
