@@ -63,7 +63,7 @@ const Index = () => {
       <header className="border-b border-border bg-card shadow-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col gap-4">
-            <img src={labs365Logo} alt="Labs 365" className="h-16 w-auto" />
+            <img src={labs365Logo} alt="Labs 365" className="h-10 w-auto object-contain" />
             <div>
               <h1 className="text-2xl font-bold text-foreground">Azure Learning Management System</h1>
               <p className="text-sm text-muted-foreground">Practice in real Azure environments</p>
