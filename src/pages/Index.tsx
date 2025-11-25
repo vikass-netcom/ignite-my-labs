@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CourseCard } from "@/components/CourseCard";
 import { LoginModal } from "@/components/LoginModal";
-import { BookOpen, GraduationCap } from "lucide-react";
+import { BookOpen } from "lucide-react";
+import labs365Logo from "@/assets/labs-365-logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -62,9 +63,7 @@ const Index = () => {
       <header className="border-b border-border bg-card shadow-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
+            <img src={labs365Logo} alt="Labs 365" className="h-12 w-auto" />
             <div>
               <h1 className="text-2xl font-bold text-foreground">Azure Learning Management System</h1>
               <p className="text-sm text-muted-foreground">Practice in real Azure environments</p>
